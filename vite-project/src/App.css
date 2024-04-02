@@ -65,3 +65,15 @@
   list-style: none;
   color: white;
 }
+
+.rentalCard {
+  border: 1px solid black;
+  width: 500px;
+}
+
+.rentalCard h1 {
+  font-size: 1.4rem;
+}
+.rentalCard h2 {
+  font-size: 1rem;
+}
