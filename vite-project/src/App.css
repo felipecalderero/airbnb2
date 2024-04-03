@@ -8,7 +8,7 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: rgb(255, 241, 244);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +25,7 @@
 }
 
 .Navbar img {
-  width: 100px;
+  width: 60px;
 }
 
 .Navbar p {
@@ -53,10 +53,19 @@
   text-align: left;
 }
 
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
 .sidebar {
   width: 5%;
   padding: 20px;
-  background-color: red;
+  background-color: pink;
   text-align: center;
 }
 
@@ -67,13 +76,54 @@
 }
 
 .rentalCard {
-  border: 1px solid black;
-  width: 500px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  margin: 10px;
+  background-color: white;
+  min-width: 400px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.details-ctn {
+  padding: 10px;
+  width: 150px;
+}
+
+.img-ctn {
+  width: 60%;
+  background-size: cover;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .rentalCard h1 {
-  font-size: 1.4rem;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: 800;
 }
 .rentalCard h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.rentalCard p {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.rentalCard img {
+  width: 60%;
+  margin-top: 0px;
+}
+
+.rentalCard button {
+  float: right;
+  background-color: pink;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800px;
+  border-radius: 15px;
 }

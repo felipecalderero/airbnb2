@@ -1,8 +1,24 @@
+import { NavLink } from "react-router-dom";
+
 function Sidebar() {
   return (
     <ul className="sidebar">
-      <li>Home</li>
-      <li>About</li>
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "selected" : "")}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "selected" : "")}
+        >
+          About
+        </NavLink>
+      </li>
     </ul>
   );
 }
