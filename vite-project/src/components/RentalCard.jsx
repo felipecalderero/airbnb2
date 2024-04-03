@@ -14,7 +14,10 @@ const RentalCard = ({ rental, deleteFunction }) => {
           <h2>
             {rental.city}, {rental.country}
           </h2>
-          <p className="price">Price: {rental.price} €</p>
+          <p>
+            {" "}
+            <span className="price">{rental.price}</span> €/night
+          </p>
           <button type="button" onClick={deleteFunction} className="btn-delete">
             {" "}
             Delete
