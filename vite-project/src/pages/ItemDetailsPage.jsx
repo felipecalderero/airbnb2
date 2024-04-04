@@ -1,9 +1,11 @@
 import { useParams, Link } from "react-router-dom"; // <== IMPORT
 //import rentalListData from "../data/rentals.json";
 
-const ItemDetailsPage = ({ rentals }) => {
+const ItemDetailsPage = ({ rentalList }) => {
+  console.log(rentalList);
+
   const { itemId } = useParams();
-  const rentalObj = rentals.results.filter((item) => item.id === itemId);
+  const rentalObj = rentalList.filter((item) => item.id === itemId);
   const rental = rentalObj[0];
   return (
     <div className="rentalCard">

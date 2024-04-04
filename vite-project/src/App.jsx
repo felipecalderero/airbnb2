@@ -8,8 +8,32 @@ import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ItemDetailsPage from "./pages/ItemDetailsPage";
 import rentalListData from "./data/rentals.json";
+import { useState } from "react";
+import EditItemPage from "./pages/EditItemPage";
 
 function App() {
+  const [rentalList, setRentalList] = useState(rentalListData.results);
+
+  const deleteRental = (rentalId) => {
+    const filteredRentals = rentalList.filter((rental) => {
+      return rental.id !== rentalId;
+    });
+    setRentalList(filteredRentals);
+  };
+
+  const addRental = (newRental) => {
+    const updatedRentalList = [newRental, ...rentalList];
+    setRentalList(updatedRentalList);
+  };
+
+  const editRental = (updatedRental) => {
+    const filteredRentals = rentalList.filter((rental) => {
+      return rental.id !== updatedRental.id;
+    });
+    const updatedRentalList = [updatedRental, ...filteredRentals];
+    setRentalList(updatedRentalList);
+  };
+
   return (
     <div className="App">
       <Navbar />
@@ -17,11 +41,26 @@ function App() {
         <Sidebar />
         <div className="page">
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            <Route
+              path="/"
+              element={
+                <DashboardPage
+                  addRental={addRental}
+                  deleteRental={deleteRental}
+                  rentalList={rentalList}
+                />
+              }
+            />
             <Route path="/about" element={<AboutPage />} />
             <Route
               path="/item/:itemId"
-              element={<ItemDetailsPage rentals={rentalListData} />}
+              element={<ItemDetailsPage rentalList={rentalList} />}
+            />
+            <Route
+              path="/edititem/:itemId"
+              element={
+                <EditItemPage rentalList={rentalList} editRental={editRental} />
+              }
             />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
