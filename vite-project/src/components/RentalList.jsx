@@ -1,22 +1,10 @@
 import RentalCard from "./RentalCard";
-import rentalListData from "../data/rentals.json";
-import { useState } from "react";
 
-const RentalList = () => {
-  const [rentalList, setRentalList] = useState(rentalListData.results);
-
-  const deleteRental = (rentalId) => {
-    const filteredRentals = rentalList.filter((rental) => {
-      return rental.id !== rentalId;
-    });
-
-    setRentalList(filteredRentals);
-  };
-
+const RentalList = ({ rentalList, deleteRental }) => {
   return (
     <div className="list">
       {rentalList
-        .filter((rental) => rental.price < 50)
+        .filter((rental) => rental.price < 150)
         .map((rental) => {
           return (
             <RentalCard

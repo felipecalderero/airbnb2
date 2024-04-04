@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-const AddRental = () => {
+const AddRental = ({ addRental }) => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
@@ -16,15 +17,18 @@ const AddRental = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newRental = {
+      id: uuidv4(),
       name,
       city,
       country,
       price,
-      image,
     };
+    newRental.picture_url = {};
+    newRental.picture_url.url = image;
+    // "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/9a1168a0abcb0aca0512010b156ac61e";
 
     console.log("Submitted", newRental);
-    //props.addRental(newRental);
+    addRental(newRental);
 
     setName("");
     setCity("");
