@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 const RentalCard = ({ rental, deleteFunction }) => {
   return (
     <div className="rentalCard">
-      <div
-        className="img-ctn"
-        style={{ backgroundImage: `url(${rental.picture_url.url})` }}
-      ></div>
+      <Link to={`item/${rental.id}`}>
+        <div
+          className="img-ctn"
+          style={{ backgroundImage: `url(${rental.picture_url.url})` }}
+        ></div>
+      </Link>
 
       <div className="details-ctn">
         <Link to={`item/${rental.id}`}>
-          <h1>{rental.name}</h1>
+          <h1 className="rental-title">{rental.name}</h1>
         </Link>
         <h2>
           {rental.city}, {rental.country}
@@ -30,7 +32,9 @@ const RentalCard = ({ rental, deleteFunction }) => {
           Delete
         </button>
         <Link to={`edititem/${rental.id}`}>
-          <button type="button">Edit</button>
+          <button type="button" className="btn-edit">
+            Edit
+          </button>
         </Link>
       </div>
     </div>

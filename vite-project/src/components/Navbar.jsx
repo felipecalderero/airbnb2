@@ -1,4 +1,4 @@
-import logo from "/src/assets/airbnb_logo.svg";
+import logo from "/src/assets/logoEquistay.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -7,7 +7,10 @@ function Navbar() {
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-      <p>Airbnb2 App</p>
+      <div className="navbarText">
+        <h3>Connect Globally, Stay Locally:</h3>
+        <p>Building a Fairer World, One Stay at a Time</p>
+      </div>
     </nav>
   );
 }
