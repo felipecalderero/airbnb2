@@ -247,6 +247,10 @@
   font-size: 0.8rem;
 }
 
+.dashboard {
+  margin-left: 40px;
+}
+
 .addRental button {
   margin-top: 30px;
   border-radius: 20px;
@@ -254,3 +258,31 @@
   color: var(--white);
   font-size: 0.8rem;
 }
+
+
+.rentalCardDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid white
+  padding: 40px
+}
+
+.rentalCardDetails img {
+  width: 50%;
+}
+
+.detailsDescription: { 
+  width: 60%;
+}
+
+.top-ctn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-ctn h1{
+  margin-left: 20px;
+}
+

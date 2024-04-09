@@ -1,3 +1,6 @@
+import mirko from "../assets/mirko.jpeg";
+import felipe from "../assets/felipe.jpeg";
+
 const AboutPage = () => {
   return (
     <div className="about">
@@ -24,7 +27,7 @@ const AboutPage = () => {
       <h2>Team Members</h2>
       <div className="team-ctn">
         <div className="team">
-          <img src="https://picsum.photos/id/237/200/300" alt="" />
+          <img src={felipe} alt="" />
           <h3>Felipe</h3>
           <p>
             Felipe's journey into the heart of EquiStay began with his
@@ -43,7 +46,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="team">
-          <img src="https://picsum.photos/id/237/200/300" alt="" />
+          <img src={mirko} alt="" />
           <h3>Mirko</h3>
           <p>
             Mirko's path to co-founding EquiStay was paved with green intentions

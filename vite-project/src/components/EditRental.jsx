@@ -36,48 +36,54 @@ const EditRental = ({ rental, editRental }) => {
   };
 
   return (
-    <div className="AddRental">
-      <h4>Add a Rental</h4>
+    <div className="addRental">
+      <h4>Edit a Rental</h4>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name="name" value={name} onChange={handleName} />
-        </label>
-
-        <label>
-          City:
-          <input type="text" name="city" value={city} onChange={handleCity} />
-        </label>
-
-        <label>
-          Country:
-          <input
-            type="text"
-            name="country"
-            value={country}
-            onChange={handleCountry}
-          />
-        </label>
-
-        <label>
-          Price:
-          <input
-            type="number"
-            name="price"
-            value={price}
-            onChange={handlePrice}
-          />
-        </label>
-
-        <label>
-          Picture:
-          <input
-            type="text"
-            name="picture"
-            value={image}
-            onChange={handlePicture}
-          />
-        </label>
+        <div>
+          <label>
+            Name:
+            <input type="text" name="name" value={name} onChange={handleName} />
+          </label>
+        </div>
+        <div>
+          <label>
+            City:
+            <input type="text" name="city" value={city} onChange={handleCity} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Country:
+            <input
+              type="text"
+              name="country"
+              value={country}
+              onChange={handleCountry}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Price:
+            <input
+              type="number"
+              name="price"
+              value={price}
+              onChange={handlePrice}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Picture:
+            <input
+              type="text"
+              name="picture"
+              value={image}
+              onChange={handlePicture}
+            />
+          </label>
+        </div>
         <button type="submit">Update Rental</button>
       </form>
     </div>
