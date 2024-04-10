@@ -32,7 +32,7 @@ const AddRental = ({ addRental }) => {
       newRental.picture_url.url = defaultImage;
     }
 
-    console.log("Submitted", newRental);
+    //console.log("Submitted", newRental);
     addRental(newRental);
 
     setName("");

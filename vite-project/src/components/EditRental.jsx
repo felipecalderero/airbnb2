@@ -29,7 +29,7 @@ const EditRental = ({ rental, editRental }) => {
     newRental.picture_url.url = image;
     // "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/9a1168a0abcb0aca0512010b156ac61e";
 
-    console.log("Edited", newRental);
+    //console.log("Edited", newRental);
     editRental(newRental);
 
     navigate("/");
